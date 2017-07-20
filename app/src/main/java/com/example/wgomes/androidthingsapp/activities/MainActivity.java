@@ -14,13 +14,13 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    DatabaseReference reference;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        reference = FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         setupView();
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Date requestDate = new Date();
         RequestQueue request = new RequestQueue("AppAndroid",
                 false, requestDate.toString(), "", requestToOn);
-        reference.child("request_queue").setValue(request);
+        databaseReference.child("request_queue").setValue(request);
     }
 
 
