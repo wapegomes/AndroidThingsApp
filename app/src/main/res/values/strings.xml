@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidThingsApp</string>
+    <string name="toogle">toogleButton</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="request">Faça sua requisição selecionando o Toogle Button</string>
+</resources>
