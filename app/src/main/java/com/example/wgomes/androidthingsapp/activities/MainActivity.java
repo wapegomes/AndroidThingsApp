@@ -15,6 +15,9 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
     DatabaseReference databaseReference;
+    public String mChildRequestQueue = "request_queue";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         Date requestDate = new Date();
         RequestQueue request = new RequestQueue("AppAndroid",
                 false, requestDate.toString(), "", requestToOn);
-        databaseReference.child("request_queue").setValue(request);
+        databaseReference.child(mChildRequestQueue).setValue(request);
     }
 
 
